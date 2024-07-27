@@ -1,0 +1,504 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!--=============== FAVICON ===============-->
+    <link rel="shortcut icon" href="assets/img/favicon.png" type="image/x-icon">
+
+    <!--=============== REMIXICONS ===============-->
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css" rel="stylesheet">
+
+    <!--=============== CSS ===============-->
+    <link rel="stylesheet" href="assets/css/styles.css">
+
+    <title>寿司亭</title>
+
+    <style>
+        /*=============== MODAL STYLES ===============*/
+    .modal {
+        display: none; 
+        position: fixed; 
+        z-index: 1; 
+        left: 0;
+        top: 0;
+        width: 100%; 
+        height: 100%; 
+        overflow: auto; 
+        background-color: rgb(0,0,0); 
+        background-color: rgba(0,0,0,0.4); 
+    }
+
+    .modal-content {
+        background-color: #fefefe;
+        margin: 15% auto; 
+        padding: 20px;
+        border: 1px solid #888;
+        width: 80%;
+        max-width: 500px;
+        text-align: center;
+        border-radius: 10px;
+    }
+
+    .modal .close {
+        color: #aaa;
+        float: right;
+        font-size: 28px;
+        font-weight: bold;
+    }
+
+    .modal .close:hover,
+    .modal .close:focus {
+        color: black;
+        text-decoration: none;
+        cursor: pointer;
+    }
+
+    .modal-img {
+        width: 100%;
+        height: auto;
+        margin-top: 10px;
+        border-radius: 10px;
+    }
+    </style>
+</head>
+<body>
+    <!--=============== MODAL ===============-->
+    <div id="newSushiModal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h2>新しい寿司料理の紹介</h2>
+            <p>新しい寿司料理「サーモンアボカドロール」をお試しください。新鮮なサーモンとクリーミーなアボカドが絶妙に調和した絶品の一品です。</p>
+            <img src="assets/img/popular-spring-rols.png" alt="New Sushi Dish" class="modal-img">
+        </div>
+    </div>
+
+    <!--==================== HEADER ====================-->
+    <header class="header" id="header">
+        <nav class="nav container">
+            <a href="" class="nav__logo">
+                <img src="assets/img/logo.png" alt="logo image">
+                寿司亭
+            </a>
+            <div class="nav__menu" id="nav-menu">
+                <ul class="nav__list">
+                    <li class="nav__item">
+                        <a href="#home" class="nav__link active-link">ホーム</a>
+                    </li>
+
+                    <li class="nav__item">
+                        <a href="#about" class="nav__link">私たちに関しては</a>
+                    </li>
+
+                    <li class="nav__item">
+                        <a href="#popular" class="nav__link">人気</a>
+                    </li>
+
+                    <li class="nav__item">
+                        <a href="#recently" class="nav__link">最近</a>
+                    </li>
+                </ul>
+
+                <!-- Close Button -->
+                <div class="nav__close" id="nav-close">
+                    <i class="ri-close-line"></i>
+                </div>
+
+                <img src="assets/img/leaf-branch-4.png" alt="nav image" class="nav__img-1">
+                <img src="assets/img/leaf-branch-3.png" alt="nav image" class="nav__img-2">
+
+            </div>
+
+            <div class="nav__buttons">
+                <!-- Theme Change Button -->
+                <i class="ri-moon-line change-theme" id="theme-button"></i>
+
+                <!-- Toggle button -->
+                <div class="nav__toggle" id="nav-toggle">
+                    <i class="ri-apps-2-line"></i>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!--==================== MAIN ====================-->
+    <main class="main">
+        <!--==================== HOME ====================-->
+        <section class="home section" id="home">
+            <div class="home__container container grid">
+                <img src="assets/img/home-sushi-rolls.png" alt="home image" class="home__img">
+
+                <div class="home__data">
+                    <h1 class="home__title">
+                        美味しい寿司を楽しむ
+
+                        <div>
+                            <img src="assets/img/home-sushi-title.png" alt="home image">
+                            寿司
+                        </div>
+                    </h1>
+
+                    <p class="home__description">
+                    レストランで最高の料理を楽しんで、素晴らしいディナーをお楽しみください。
+                    </p>
+
+                    <a href="#" class="button">
+                        今すぐ注文 <i class="ri-arrow-right-line"></i>
+                    </a>
+                </div>
+            </div>
+
+            <img src="assets/img/leaf-branch-2.png" alt="home leaf" class="home__leaf-1">
+            <img src="assets/img/leaf-branch-4.png" alt="home leaf" class="home__leaf-2">
+
+        </section>
+
+        <!--==================== ABOUT ====================-->
+        <section class="about section" id="about">
+            <div class="about__container container grid">
+                <div class="about__data">
+                    <span class="section__subtitle">
+                        私たちに関しては
+                    </span>
+                    <h2 class="section__title about__title">
+                        <div>
+                            提供する
+                            <img src="assets/img/about-sushi-title.png" alt="about image">
+                        </div>
+                        健康的な食べ物
+                    </h2>
+
+                    <p class="about__description">
+                        食べ物は、翼や根を持つ親戚から私たちに届けられます。これは、文化として食べ物を考える方法です。食べ物には世代から世代へと伝わる歴史があります。
+                    </p>
+                </div>
+
+                <img src="assets/img/about-sushi.png" alt="about image" class="about__img">
+            </div>
+
+            <img src="assets/img/leaf-branch-1.png" alt="about image" class="about__leaf">
+        </section>
+
+        <!--==================== SUSHI PROCESS ====================-->
+        <section class="sushi-process section" id="sushi-process">
+            <span class="section__subtitle">
+                寿司の作り方
+            </span>
+            <h2 class="section__title">
+                プロセス
+            </h2>
+
+            <div class="sushi-process__container container grid">
+                <article class="sushi-process__card">
+                    <h3 class="sushi-process__title">新鮮な魚を選ぶ</h3>
+                    <p class="sushi-process__description">最高の寿司のために、新鮮で高品質の魚を選びます。</p>
+                </article>
+                <article class="sushi-process__card">
+                    <h3 class="sushi-process__title">適切な米の準備</h3>
+                    <p class="sushi-process__description">寿司米は特別な方法で調理し、適切な食感と味を確保します。</p>
+                </article>
+                <article class="sushi-process__card">
+                    <h3 class="sushi-process__title">伝統的な技法</h3>
+                    <p class="sushi-process__description">伝統的な技法を用いて、寿司を丁寧に巻き上げます。</p>
+                </article>
+                <article class="sushi-process__card">
+                    <h3 class="sushi-process__title">新鮮な素材を使用</h3>
+                    <p class="sushi-process__description">新鮮な食材を使用して、美味しさと健康を提供します。</p>
+                </article>
+                <article class="sushi-process__card">
+                    <h3 class="sushi-process__title">見た目の美しさ</h3>
+                    <p class="sushi-process__description">寿司は見た目も美しく、目でも楽しめる料理です。</p>
+                </article>
+            </div>
+        </section>
+
+        <!--==================== SPECIAL SUSHI ====================-->
+        <section class="special-sushi section" id="special-sushi">
+            <span class="section__subtitle">
+                特別な寿司
+            </span>
+            <h2 class="section__title">
+                私たちの寿司の違い
+            </h2>
+
+            <div class="special-sushi__container container grid">
+                <article class="special-sushi__card">
+                    <h3 class="special-sushi__title">独自のレシピ</h3>
+                    <p class="special-sushi__description">私たちの寿司は独自のレシピで作られ、他では味わえない風味を提供します。</p>
+                </article>
+                <article class="special-sushi__card">
+                    <h3 class="special-sushi__title">厳選された材料</h3>
+                    <p class="special-sushi__description">最高の品質を保証するために、厳選された材料のみを使用しています。</p>
+                </article>
+                <article class="special-sushi__card">
+                    <h3 class="special-sushi__title">熟練の職人</h3>
+                    <p class="special-sushi__description">熟練の職人が一つ一つ丁寧に作り上げる寿司です。</p>
+                </article>
+                <article class="special-sushi__card">
+                    <h3 class="special-sushi__title">独特のプレゼンテーション</h3>
+                    <p class="special-sushi__description">私たちの寿司は見た目も美しく、食事を一層楽しませます。</p>
+                </article>
+                <article class="special-sushi__card">
+                    <h3 class="special-sushi__title">持続可能な取り組み</h3>
+                    <p class="special-sushi__description">環境に配慮した持続可能な取り組みを行っています。</p>
+                </article>
+            </div>
+        </section>
+
+        <!--==================== POPULAR ====================-->
+        <section class="popular section" id="popular">
+            <span class="section__subtitle">
+                最高の料理
+            </span>
+            <h2 class="section__title">
+                人気の料理
+            </h2>
+
+            <div class="popular__container container grid">
+                <article class="popular__card">
+                    <img src="assets/img/popular-onigiri.png" alt="popular image" class="popular__img">
+
+                    <h3 class="popular name">おにぎり</h3>
+                        <span class="popular__description">
+                            日本料理
+                        </span>
+
+                        <span class="popular__price">950円</span>
+                            <button class="popular__button">
+                                <i class="ri-shopping-bag-line"></i>
+                            </button>
+                </article>
+
+                <article class="popular__card">
+                    <img src="assets/img/popular-spring-rols.png" alt="popular image" class="popular__img">
+
+                    <h3 class="popular name">春巻き</h3>
+                        <span class="popular__description">
+                            日本料理
+                        </span>
+
+                        <span class="popular__price">700円</span>
+                            <button class="popular__button">
+                                <i class="ri-shopping-bag-line"></i>
+                            </button>
+                </article>
+
+                <article class="popular__card">
+                    <img src="assets/img/popular-sushi-rolls.png" alt="popular image" class="popular__img">
+
+                    <h3 class="popular name">寿司ロール</h3>
+                        <span class="popular__description">
+                            日本料理
+                        </span>
+
+                        <span class="popular__price">600円</span>
+                            <button class="popular__button">
+                                <i class="ri-shopping-bag-line"></i>
+                            </button>
+                </article>
+            </div>
+        </section>
+
+        <!--==================== RECENTLY ====================-->
+        <section class="recently section" id="recently">
+            <div class="recently__container container grid">
+                <div class="recently__data">
+                    <span class="section__subtitle">
+                        最近追加されたもの
+                    </span>
+                    <h2 class="section__title">
+                        寿司サムライ <br>
+                        サーモンチーズ
+                    </h2>
+
+                    <p class="recently__description">
+                        新しい料理をチェックして、美味しい食事を楽しんでください。
+                    </p>
+
+                    <a href="#" class="button">
+                        今すぐ注文 <i class="ri-arrow-right-line"></i>
+                    </a>
+
+                    <img src="assets/img/spinach-leaf.png" alt="recently image" class="recently__data-img">
+                </div>
+
+                <img src="assets/img/recently-salmon-sushi.png" alt="recently image" class="recently__img">
+            </div>
+
+            <!-- <img src="assets/img/leaf-branch-2.png" alt="recently image" class="recently__leaf-1">
+            <img src="assets/img/leaf-branch-3.png" alt="recently image" class="recently__leaf-2"> -->
+
+        </section>
+
+        <!--==================== NEWSLETTER ====================-->
+        <section class="newsletter section">
+            <div class="newsletter__container container">
+                <div class="newsletter__content grid">
+                    <img src="assets/img/newsletter-sushi.png" alt="newsletter image" class="newsletter__img">
+
+                    <div class="newsletter__data">
+                        <span class="section__subtitle"> ニュースレター</span>
+                        <h2 class="section__title">
+                            オファー更新を<br>
+                            購読する
+                        </h2>
+
+                        <form action="" class="newsletter__form">
+                            <input type="email" placeholder="メールアドレスを入力" class="newsletter__input">
+
+                            <button class="button newsletter__button">
+                                購読 <i class="ri-send-plane-line"></i>
+                            </button>
+                        </form>
+                    </div>
+                </div>
+
+                <img src="assets/img/spinach-leaf.png" alt="newsletter__img" class="newsletter__spinach">
+            </div>
+            
+        </section>
+    </main>
+
+    <!--==================== FOOTER ====================-->
+    <footer class="footer">
+        <div class="footer__container container grid">
+            <div>
+                <a href="#" class="footer__logo">
+                    <img src="assets/img/logo.png" alt="logo image">
+                    寿司亭
+                </a>
+
+                <p class="footer__description">
+                    体のための食べ物だけでなく、<br>
+                    魂のための食べ物も必要です。
+                </p>
+            </div>
+
+            <div class="footer__content">
+                <div>
+                    <h3 class="footer__title">メインメニュー</h3>
+                    <ul class="footer__links">
+                        <li>
+                            <a href="#" class="footer__link">私たちに関しては</a>
+                        </li>
+                        <li>
+                            <a href="#" class="footer__link">メニュー</a>
+                        </li>
+                        <li>
+                            <a href="#" class="footer__link">オファー</a>
+                        </li>
+                        <li>
+                            <a href="#" class="footer__link">イベント</a>
+                        </li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h3 class="footer__title">情報</h3>
+                    <ul class="footer__links">
+                        <li>
+                            <a href="#" class="footer__link">連絡先</a>
+                        </li>
+                        <li>
+                            <a href="#" class="footer__link">注文と返品</a>
+                        </li>
+                        <li>
+                            <a href="#" class="footer__link">ビデオ</a>
+                        </li>
+                        <li>
+                            <a href="#" class="footer__link">予約</a>
+                        </li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h3 class="footer__title">住所</h3>
+                    <ul class="footer__links">
+                        <li class="footer__information">
+                            アベ. ハシエンダ 1234 <br>
+                            キアンブ ロード、ケニア
+                        </li>
+                        <li class="footer__information">
+                            午前9時 - 午後11時
+                        </li>
+                       
+                    </ul>
+                </div>
+
+                <div>
+                    <h3 class="footer__title">ソーシャルメディア</h3>
+                    <ul class="footer__social">
+                       <a href="https://www.facebook.com/" target="_blank" class="footer__social-link">
+                        <i class="ri-facebook-box-fill"></i>
+                       </a> 
+
+                       <a href="https://www.instagram.com/" target="_blank" class="footer__social-link">
+                        <i class="ri-instagram-fill"></i>
+                       </a> 
+
+                       <a href="https://twitter.com/" target="_blank" class="footer__social-link">
+                        <i class="ri-twitter-fill"></i>
+                       </a> 
+
+                    </ul>
+                </div>
+            </div>
+
+            <img src="assets/img/spring-onion.png" alt="footer image" class="footer__onion">
+            <img src="assets/img/spring-onion.png" alt="footer image" class="footer__onion-1">
+            <img src="assets/img/spinach-leaf.png" alt="footer image" class="footer__spinach">
+            <img src="assets/img/spinach-leaf.png" alt="footer image" class="footer__spinach-1">
+            <img src="assets/img/leaf-branch-4.png" alt="footer image" class="footer__leaf">
+
+        </div>
+
+        <div class="footer__info container">
+            <div class="footer__card">
+                <img src="assets/img/footer-card-1.png" alt="footer image">
+                <img src="assets/img/footer-card-2.png" alt="footer image">
+                <img src="assets/img/footer-card-3.png" alt="footer image">
+                <img src="assets/img/footer-card-4.png" alt="footer image">
+            </div>
+
+            <span class="footer__copy">
+                &#169; Copyright. All rights reserved
+            </span>
+        </div>
+    </footer>
+
+    <!--========== SCROLL UP ==========-->
+    <a href="#" class="scrollup" id="scroll-up">
+       <i class="ri-arrow-up-line"></i>
+    </a>
+
+    <!--=============== SCROLLREVEAL ===============-->
+    <script src="assets/js/scrollreveal.min.js"></script>
+
+    <!--=============== MAIN JS ===============-->
+    <script src="assets/js/main.js"></script>
+
+    <script>
+        //=============== MODAL SCRIPT ===============
+        document.addEventListener("DOMContentLoaded", function() {
+            var modal = document.getElementById("newSushiModal");
+            var span = document.getElementsByClassName("close")[0];
+
+            // Open the modal as soon as the website loads
+            modal.style.display = "block";
+
+            // Close the modal when the user clicks on the close button
+            span.onclick = function() {
+                modal.style.display = "none";
+            }
+
+            // Close the modal when the user clicks anywhere outside of the modal
+            window.onclick = function(event) {
+                if (event.target == modal) {
+                    modal.style.display = "none";
+                }
+            }
+        });
+    </script>
+</body>
+</html>
